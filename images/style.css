@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #e7e7e7;
+}
+
+#container {
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f3f3f3;
+  max-width: 500px;
+  border-radius: 15px;
+}
+
+#container.result-true {
+  border-color: rgb(0, 133, 0);
+  border-width: 3px;
+  box-shadow: 14px 20px 20px 8px rgb(54, 209, 54);
+}
+
+#container.result-false {
+  border-color: red;
+  border-width: 3px;
+  box-shadow: 14px 20px 20px 8px rgb(255, 75, 75);
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#mpassed {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#textfailed {
+  color: rgb(0, 0, 0);
+  margin-top: 15px;
+}
+
+img {
+  padding-bottom: 10px;
+  margin-top: -15px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #303030;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #5f5f5f;
+}
+
+#mpassed img {
+  opacity: 0;
+  animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Style the result box */
+#result-box {
+  border-radius: 10px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+#result-box.result-true {
+  opacity: 0;
+  animation: fade-in 5s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#result-box.result-true {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: rgb(0, 0, 0);
+}
+
+#result-box.result-false {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  border-width: 0px;
+}

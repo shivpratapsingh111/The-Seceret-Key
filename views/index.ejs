@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--lr ebg xln ubgn unv-->
+    <meta charset="UTF-8" />
+    <title>Enter the key</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <div
+      id="container"
+      class="<%= result === 'true' ? 'result-true' : (result === 'false' ? 'result-false' : '') %>"
+    >
+      <h1>It's deep as Mariana's Web</h1>
+      <p>Use this <a href="img.png">image</a> as a start point.</p>
+      <form action="/" method="POST">
+        <input
+          type="text"
+          name="textInput"
+          placeholder="Enter the key..."
+        />
+        <button type="submit">Check</button>
+      </form>
+      <!--Shows the result-->
+      <div id="result-message">
+        <% if (result==="false" ) { %>
+        <p id="textfailed"><strong>Incorrect</strong></p>
+        <% } %>
+      </div>
+      <div
+        id="result-box"
+        class="<%= result === 'true' ? 'result-true' : (result === 'false' ? 'result-false' : '') %>"
+      >
+        <% if (result==="true" ) { %>
+        <div id="mpassed">
+          <img src="m.gif" alt="Mission-Passed" />
+        </div>
+        <script>
+          var audio = new Audio("m-audio.mp3");
+          audio.play();
+        </script>
+        <% } else if (result==="false" ) { %>
+        <div id="mfailed">
+          <script>
+            var resultbox = document.getElementById("result-box");
+            var randomNumber = Math.floor(Math.random() * 3) + 1;
+            resultbox.innerHTML =
+              "<img src='acha" +
+              randomNumber +
+              ".gif' alt='Sorry!!' width='400' height='300'>";
+          </script>
+        </div>
+        <% } %>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>
+
+
